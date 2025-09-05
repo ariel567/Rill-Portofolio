@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Rill</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #38f9d7;
+      font-weight: 700;
+    }
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #ddd;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #38f9d7;
+    }
+    section {
+      padding: 80px 10%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #38f9d7;
+    }
+    /* Hero */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      color: #38f9d7;
+      margin: 10px 0;
+    }
+    .hero-text h2 {
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+    .hero-text p {
+      margin-top: 10px;
+      max-width: 500px;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      color: #38f9d7;
+      font-size: 1.4rem;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #fff;
+    }
+    .hero-img {
+      flex: 1;
+      text-align: center;
+      min-width: 280px;
+    }
+    .hero-img img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #38f9d7;
+      box-shadow: 0 0 25px rgba(56, 249, 215, 0.5);
+    }
+    /* Service */
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card i {
+      margin-bottom: 12px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.1);
+    }
+    /* Biography */
+    #biography p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+    #biography .bio-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #biography .bio-img img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #38f9d7;
+      box-shadow: 0 0 20px rgba(56, 249, 215, 0.4);
+    }
+    #biography .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    /* Work */
+    .work-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .work-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .work-gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Contact */
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 12px;
+      background: #38f9d7;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #2cd1b4;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      margin-top: 40px;
+    }
+    /* Animasi Scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>PORTOFOLIO</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#service">Service</a>
+      <a href="#biography">Biography</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home">
+    <div class="hero fade-in">
+      <div class="hero-text">
+        <h2>SOFTWARE ENGINEERING STUDENTS</h2>
+        <h1>ARIEL SENA RAMADHAN</h1>
+        <p>Halo, saya <b>ARIEL SENA RAMADHAN</b>.  
+            Biasa dipanggil <b>RILL </b>Saya Seorang siswa <b>SMK RK BINTANG TIMUR</b> jurusan <b>Rekayasa Perangkat Lunak</b>.  
+            Saya memiliki minat di bidang <b>aplikasi desktop</b>, <b>web development</b>, dan <b>UI/UX design</b>.  
+            Saya suka membuat karya yang sederhana namun bermanfaat, dengan tujuan memberi inspirasi dan kegunaan nyata.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/Rill" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/riell518_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/6282173903502" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="download1.jpg" alt="Foto Profil Rill">
+      </div>
+    </div>
+  </section>
+
+  <!-- Service -->
+  <section id="service" class="fade-in">
+    <h2>Service</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fas fa-code fa-2x" style="color:#38f9d7;"></i>
+        <h3>Web Development</h3>
+        <p>Membangun website modern, cepat, dan responsif.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-pencil-ruler fa-2x" style="color:#38f9d7;"></i>
+        <h3>UI/UX Design</h3>
+        <p>Desain antarmuka yang menarik dan mudah digunakan.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-mobile-alt fa-2x" style="color:#38f9d7;"></i>
+        <h3>App Development</h3>
+        <p>Mengembangkan aplikasi sesuai kebutuhan.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullhorn fa-2x" style="color:#38f9d7;"></i>
+        <h3>Branding</h3>
+        <p>Membantu membangun identitas brand yang kuat dan berkesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biography -->
+  <section id="biography" class="fade-in">
+    <h2>Biography</h2>
+    <div class="bio-img">
+      <img src="a.jpeg" alt="Foto Rill">
+      <img src="ariel1.jpeg" alt="Foto Rill">
+      <img src="ariel2.jpeg" alt="Foto Rill">
+    </div>
+    <p>
+      Halo, saya <b>Rill</b>. Saya seorang Siswa SMK dengan Jurusan Rekayasa Perangkat Lunak.  
+      Saya lahir pada 01 September 2008 dan tinggal di kota Pematang Siantar.  
+      Saya senang belajar IT dan pernah mengerjakan program kasir Uniqlo, aplikasi top-up game "RILL TOP UP",  
+      dan beberapa project web lainnya. Hobi saya berolahraga seperti bermain Volly, Futsal,  
+      juga suka bermain game Mobile Legends serta alat musik Gitar.  
+      Tujuan saya sederhana: membuat karya yang bisa berguna dan menginspirasi.  
+      Motto saya: <i>"Simple is better, useful is best."</i>
+    </p>
+    <div class="social-icons">
+      <a href="https://facebook.com/Rill" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/riell518_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/6282173903502" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="fade-in">
+    <h2>My Work</h2>
+    <div class="work-gallery">
+      <img src="https://picsum.photos/400/300?random=1" alt="Project 1">
+      <img src="https://picsum.photos/400/300?random=2" alt="Project 2">
+      <img src="https://picsum.photos/400/300?random=3" alt="Project 3">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea rows="5" placeholder="Pesan Anda"></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rill. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script Animasi Scroll -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const options = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
+</html>
